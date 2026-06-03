@@ -89,7 +89,7 @@ module.exports = async (req, res) => {
 
                 // Send admin notification
                 const adminMailOptions = {
-                    from: `"Nexus AI Academy Admissions" <${process.env.SMTP_USER}>`,
+                    from: `"MyDream Academy Admissions" <${process.env.SMTP_USER}>`,
                     to: adminEmail,
                     subject: `🚨 [New Lead] Enrollment Request: ${name}`,
                     html: `
@@ -124,14 +124,14 @@ module.exports = async (req, res) => {
 
                 // Send student welcome email
                 const studentMailOptions = {
-                    from: `"Nexus AI Academy" <${process.env.SMTP_USER}>`,
+                    from: `"MyDream Academy" <${process.env.SMTP_USER}>`,
                     to: email,
-                    subject: `Welcome to Nexus AI Academy! Slot Reserved for ${course}`,
+                    subject: `Welcome to MyDream Academy! Slot Reserved for ${course}`,
                     html: `
                         <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 600px; color: #1e293b; line-height: 1.6; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; margin: 0 auto; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);">
                             <!-- Header -->
                             <div style="background: linear-gradient(135deg, #a855f7 0%, #06b6d4 100%); padding: 30px 20px; text-align: center;">
-                                <h1 style="color: #ffffff; margin: 0; font-size: 24px; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.15);">Nexus AI Academy</h1>
+                                <h1 style="color: #ffffff; margin: 0; font-size: 24px; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.15);">MyDream Academy</h1>
                                 <p style="color: rgba(255, 255, 255, 0.9); margin: 5px 0 0 0; font-size: 14px;">Your Career Launchpad for AI & Data Science</p>
                             </div>
                             
@@ -162,7 +162,7 @@ module.exports = async (req, res) => {
                             
                             <!-- Footer -->
                             <div style="background-color: #f1f5f9; padding: 20px; text-align: center; font-size: 12px; color: #64748b; border-top: 1px solid #e2e8f0;">
-                                <p style="margin: 0;">&copy; 2026 Nexus AI Academy. BKC G-Block, Bandra East, Mumbai, MH, 400051.</p>
+                                <p style="margin: 0;">&copy; 2026 MyDream Academy. BKC G-Block, Bandra East, Mumbai, MH, 400051.</p>
                                 <p style="margin: 5px 0 0 0;">This is an automated confirmation email. You can contact support at venkatagopigali6@gmail.com</p>
                             </div>
                         </div>
@@ -195,7 +195,7 @@ module.exports = async (req, res) => {
                 const url = `https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`;
                 const basicAuth = Buffer.from(`${accountSid}:${authToken}`).toString('base64');
 
-                const messageBody = `Hello *${name}*! Welcome to *Nexus AI Academy* 🚀\n\nWe have successfully reserved your demo slot for the *${course}*.\n\nOur admissions advisor will call you at *${formattedPhone}* shortly to schedule your orientation.\n\nCheck your inbox (*${email}*) for the syllabus catalog! Let's build the future together.`;
+                const messageBody = `Hello *${name}*! Welcome to *MyDream Academy* 🚀\n\nWe have successfully reserved your demo slot for the *${course}*.\n\nOur admissions advisor will call you at *${formattedPhone}* shortly to schedule your orientation.\n\nCheck your inbox (*${email}*) for the syllabus catalog! Let's build the future together.`;
 
                 // Prepare URL Encoded parameters for Twilio POST
                 const params = new URLSearchParams();
