@@ -1,0 +1,16 @@
+{
+  "name": "nexus-ai-academy",
+  "version": "1.0.0",
+  "description": "Premium training institute site with automated email and WhatsApp alerts.",
+  "main": "api/enroll.js",
+  "scripts": {
+    "start": "node api/enroll.js"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.13",
+    "mysql2": "^3.9.7"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

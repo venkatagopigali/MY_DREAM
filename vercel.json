@@ -1,0 +1,9 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/api/enroll",
+      "destination": "/api/enroll.js"
+    }
+  ]
+}
