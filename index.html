@@ -26,8 +26,60 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="assets/favicon_logo.jpg">
+    <link rel="apple-touch-icon" href="assets/favicon_logo.jpg">
+
     <!-- Custom Style System Sheet -->
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+    /* ── Navbar Dropdown ── */
+    .nav-list li { position: relative; }
+    .nav-dropdown {
+        display: none;
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 220px;
+        background: rgba(10, 14, 30, 0.95);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(6,182,212,0.25);
+        border-radius: 12px;
+        padding: 8px 0;
+        z-index: 9999;
+        box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+        animation: dropFade 0.2s ease;
+    }
+    @keyframes dropFade {
+        from { opacity: 0; transform: translateX(-50%) translateY(-8px); }
+        to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+    .nav-list li:hover .nav-dropdown { display: block; }
+    .nav-dropdown a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 18px;
+        color: var(--text-muted);
+        font-size: 0.88rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        border-left: 2px solid transparent;
+    }
+    .nav-dropdown a:hover {
+        color: var(--secondary-cyan);
+        background: rgba(6,182,212,0.08);
+        border-left-color: var(--secondary-cyan);
+        padding-left: 22px;
+    }
+    .nav-dropdown a i { font-size: 0.8rem; color: var(--secondary-cyan); width: 14px; }
+    .nav-dropdown-divider { height: 1px; background: rgba(255,255,255,0.07); margin: 4px 0; }
+    .nav-link-arrow { font-size: 0.65rem; margin-left: 4px; opacity: 0.6; transition: transform 0.2s; }
+    .nav-list li:hover .nav-link-arrow { transform: rotate(180deg); opacity: 1; }
+    </style>
 </head>
 <body>
 
@@ -50,9 +102,28 @@
             
             <nav class="nav" id="navigation-menu">
                 <ul class="nav-list">
-                    <li><a href="#courses" class="nav-link active">Courses</a></li>
+                    <!-- Courses dropdown -->
+                    <li>
+                        <a href="#courses" class="nav-link active">Courses <i class="fa-solid fa-chevron-down nav-link-arrow"></i></a>
+                        <div class="nav-dropdown">
+                            <a href="#course-analyst"><i class="fa-solid fa-chart-column"></i> Data Analyst Program</a>
+                            <a href="#course-science"><i class="fa-solid fa-flask"></i> Data Science Program</a>
+                            <a href="#course-genai"><i class="fa-solid fa-robot"></i> Generative AI Program</a>
+                            <a href="#course-python-fullstack"><i class="fa-brands fa-python"></i> Python Full Stack Program</a>
+                        </div>
+                    </li>
                     <li><a href="#why-choose-us" class="nav-link">Why Us</a></li>
-                    <li><a href="#curriculum" class="nav-link">Curriculum</a></li>
+                    <!-- Curriculum dropdown -->
+                    <li>
+                        <a href="#curriculum" class="nav-link">Curriculum <i class="fa-solid fa-chevron-down nav-link-arrow"></i></a>
+                        <div class="nav-dropdown">
+                            <a href="#curriculum" onclick="document.querySelector('[data-target=curriculum-analyst]').click()"><i class="fa-solid fa-chart-bar"></i> Data Analyst Syllabus</a>
+                            <a href="#curriculum" onclick="document.querySelector('[data-target=curriculum-science]').click()"><i class="fa-solid fa-brain"></i> Data Science Syllabus</a>
+                            <a href="#curriculum" onclick="document.querySelector('[data-target=curriculum-genai]').click()"><i class="fa-solid fa-wand-magic-sparkles"></i> Generative AI Syllabus</a>
+                            <div class="nav-dropdown-divider"></div>
+                            <a href="#curriculum" onclick="document.querySelector('[data-target=curriculum-python-fullstack]').click()"><i class="fa-brands fa-python"></i> Python Full Stack Syllabus</a>
+                        </div>
+                    </li>
                     <li><a href="#simulator" class="nav-link">Salary Calculator</a></li>
                     <li><a href="#testimonials" class="nav-link">Success Stories</a></li>
                     <li><a href="#faq" class="nav-link">FAQs</a></li>
@@ -1108,6 +1179,7 @@
                                     <option value="Data Analyst Program">Data Analyst Program</option>
                                     <option value="Data Science Program">Data Science Program</option>
                                     <option value="Generative AI Program">Generative AI Program</option>
+                                    <option value="Python Full Stack Program">Python Full Stack Program</option>
                                 </select>
                             </div>
                             <span class="error-msg" id="course-error">Please select a program</span>
