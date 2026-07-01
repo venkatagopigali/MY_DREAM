@@ -1828,79 +1828,58 @@ img {
     }
 }
 
-/* Floating WhatsApp Button */
-.floating-whatsapp {
+/* Floating Socials Container */
+.floating-socials {
     position: fixed;
     bottom: 30px;
     left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+/* Base Floating Icon */
+.floating-icon {
     width: 60px;
     height: 60px;
-    background-color: #25d366;
-    color: #fff;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 32px;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-    z-index: 1000;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #fff;
     text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.floating-icon:hover {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+/* Individual Brand Styles */
+.floating-whatsapp {
+    background-color: #25d366;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
 }
 .floating-whatsapp:hover {
-    transform: scale(1.1);
     box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-    color: #fff;
 }
 
-/* Floating Instagram Button */
 .floating-instagram {
-    position: fixed;
-    bottom: 100px;
-    left: 30px;
-    width: 60px;
-    height: 60px;
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 32px;
     box-shadow: 0 4px 15px rgba(214, 36, 159, 0.4);
-    z-index: 1000;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-decoration: none;
 }
 .floating-instagram:hover {
-    transform: scale(1.1);
     box-shadow: 0 6px 20px rgba(214, 36, 159, 0.6);
-    color: #fff;
 }
 
-/* Floating YouTube Button */
 .floating-youtube {
-    position: fixed;
-    bottom: 170px;
-    left: 30px;
-    width: 60px;
-    height: 60px;
     background-color: #FF0000;
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 32px;
     box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
-    z-index: 1000;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-decoration: none;
 }
 .floating-youtube:hover {
-    transform: scale(1.1);
     box-shadow: 0 6px 20px rgba(255, 0, 0, 0.6);
-    color: #fff;
 }
 
 /* Mobile Screens (max-width: 768px) */
