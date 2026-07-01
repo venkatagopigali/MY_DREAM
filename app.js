@@ -144,11 +144,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Automatically expand the first item of accordions
+    // Automatically expand the first item of accordions (Disabled per user request)
+    /*
     document.querySelectorAll('.curriculum-content').forEach(container => {
         const firstItem = container.querySelector('.accordion-item');
         if (firstItem) firstItem.classList.add('open');
     });
+    */
     
     const faqFirstItem = document.querySelector('.faq-accordion-container .accordion-item');
     if (faqFirstItem) faqFirstItem.classList.add('open');
