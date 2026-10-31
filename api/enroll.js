@@ -94,7 +94,7 @@ module.exports = async (req, res) => {
                     subject: `🚨 [New Lead] Enrollment Request: ${name}`,
                     html: `
                         <div style="font-family: Arial, sans-serif; max-width: 600px; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
-                            <h2 style="color: #6366f1; border-bottom: 2px solid #6366f1; padding-bottom: 10px;">New Student Enrollment Registration</h2>
+                            <h2 style="color: #2563eb; border-bottom: 2px solid #2563eb; padding-bottom: 10px;">New Student Enrollment Registration</h2>
                             <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
                                 <tr>
                                     <td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #eee; width: 35%;">Full Name:</td>
@@ -130,7 +130,7 @@ module.exports = async (req, res) => {
                     html: `
                         <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 600px; color: #1e293b; line-height: 1.6; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; margin: 0 auto; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);">
                             <!-- Header -->
-                            <div style="background: linear-gradient(135deg, #a855f7 0%, #06b6d4 100%); padding: 30px 20px; text-align: center;">
+                            <div style="background: linear-gradient(135deg, #2563eb 0%, #f97316 100%); padding: 30px 20px; text-align: center;">
                                 <h1 style="color: #ffffff; margin: 0; font-size: 24px; font-weight: bold; text-shadow: 0 2px 4px rgba(0,0,0,0.15);">MyDream Academy</h1>
                                 <p style="color: rgba(255, 255, 255, 0.9); margin: 5px 0 0 0; font-size: 14px;">Your Career Launchpad for AI & Data Science</p>
                             </div>
@@ -140,7 +140,7 @@ module.exports = async (req, res) => {
                                 <h3 style="margin-top: 0; color: #0f172a; font-size: 18px;">Hi ${name},</h3>
                                 <p>Thank you for booking a <strong>Free Demo Session & Career Consultation</strong>. We are excited to assist you with your tech career journey!</p>
                                 
-                                <div style="background-color: #f8fafc; border-left: 4px solid #a855f7; padding: 15px; margin: 20px 0; border-radius: 0 6px 6px 0;">
+                                <div style="background-color: #f8fafc; border-left: 4px solid #2563eb; padding: 15px; margin: 20px 0; border-radius: 0 6px 6px 0;">
                                     <h4 style="margin: 0 0 5px 0; color: #0f172a; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Reservation Receipt:</h4>
                                     <p style="margin: 3px 0; font-size: 14px;"><strong>Program Track:</strong> ${course}</p>
                                     <p style="margin: 3px 0; font-size: 14px;"><strong>Consultant Status:</strong> Reserved & Queued</p>
