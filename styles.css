@@ -204,10 +204,47 @@ img {
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     font-family: var(--font-heading);
-    font-size: 1.5rem;
+    text-decoration: none;
+    line-height: 1.1;
+}
+.brand-logo-img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--secondary-orange);
+    box-shadow: 0 0 12px rgba(249, 115, 22, 0.25);
+    transition: var(--transition-smooth);
+    flex-shrink: 0;
+}
+.logo:hover .brand-logo-img {
+    transform: scale(1.06) rotate(3deg);
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 16px rgba(59, 130, 246, 0.35);
+}
+.logo-text-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.logo-text {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.3px;
+}
+.logo-subtext {
+    font-size: 0.62rem;
     font-weight: 700;
+    letter-spacing: 1.8px;
+    color: var(--secondary-orange);
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+.footer-logo {
+    margin-bottom: 20px;
 }
 .logo-icon {
     font-size: 1.6rem;
