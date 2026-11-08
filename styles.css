@@ -199,6 +199,10 @@ img {
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 24px;
 }
 
 .logo {
@@ -254,38 +258,64 @@ img {
 
 .nav-list {
     display: flex;
-    gap: 32px;
+    align-items: center;
+    gap: clamp(8px, 1.3vw, 20px);
+    margin: 0;
+    padding: 0;
 }
 
 .nav-link {
-    font-size: 0.95rem;
+    font-size: 0.88rem;
     font-weight: 500;
     color: var(--text-secondary);
     transition: var(--transition-smooth);
     position: relative;
-    padding: 6px 0;
+    padding: 8px 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+    border-radius: 6px;
+    line-height: 1.2;
 }
-.nav-link:hover, .nav-link.active {
+.nav-link:hover {
     color: var(--primary-blue);
+    background: rgba(59, 130, 246, 0.05);
+}
+.nav-link.active {
+    color: var(--primary-blue);
+    font-weight: 600;
 }
 .nav-link::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
+    bottom: 2px;
+    left: 10px;
+    right: 10px;
+    height: 2.5px;
     background: var(--gradient-blue-orange);
-    transition: var(--transition-smooth);
+    border-radius: 4px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-link:hover::after, .nav-link.active::after {
-    width: 100%;
+.nav-link:hover::after,
+.nav-link.active::after {
+    transform: scaleX(1);
 }
 
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
+    flex-shrink: 0;
+}
+.header-actions .btn {
+    white-space: nowrap;
+}
+.header-actions .btn-sm {
+    padding: 8px 16px;
+    font-size: 0.82rem;
 }
 
 /* Premium Buttons Styling */
@@ -2535,8 +2565,8 @@ img {
     box-shadow: 0 6px 20px rgba(255, 0, 0, 0.6);
 }
 
-/* Mobile Screens (max-width: 768px) */
-@media (max-width: 768px) {
+/* Tablet & Mobile Screens (max-width: 1040px) */
+@media (max-width: 1040px) {
     /* Mobile Menu Toggle Logic */
     .mobile-toggle {
         display: flex;
