@@ -2237,6 +2237,269 @@ img {
     opacity: 1;
 }
 
+/* ── MSME Approval & Accreditation Block ── */
+.msme-approval-section {
+    padding: 20px 0 50px 0;
+    position: relative;
+    background: transparent;
+}
+.msme-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.25), rgba(249, 115, 22, 0.25), transparent);
+    margin-bottom: 30px;
+    width: 100%;
+}
+.msme-card {
+    background: #ffffff;
+    border: 1px solid rgba(59, 130, 246, 0.16);
+    border-top: 3px solid #034ea1;
+    border-radius: 16px;
+    padding: 28px 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+.msme-card:hover {
+    box-shadow: 0 10px 30px rgba(3, 78, 161, 0.08);
+}
+.msme-content-grid {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 32px;
+    align-items: center;
+}
+.msme-logo-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+.msme-logo-wrapper {
+    width: 90px;
+    height: 90px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+    border: 1px solid rgba(3, 78, 161, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(3, 78, 161, 0.08);
+    transition: transform var(--transition-smooth);
+}
+.msme-card:hover .msme-logo-wrapper {
+    transform: scale(1.04);
+}
+.msme-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+.msme-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: rgba(3, 78, 161, 0.08);
+    color: #034ea1;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.msme-badge-pill i {
+    font-size: 0.72rem;
+}
+.msme-details-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.msme-govt-subheading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--secondary-orange);
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+.msme-title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.msme-title {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #034ea1;
+    letter-spacing: -0.2px;
+    margin: 0;
+}
+.msme-verified-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #ecfdf5;
+    color: #059669;
+    border: 1px solid #a7f3d0;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+.msme-desc {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+    max-width: 580px;
+}
+.msme-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 4px;
+}
+.msme-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+.msme-reg-col {
+    flex-shrink: 0;
+}
+.msme-reg-box {
+    background: #f8fafc;
+    border: 1px solid rgba(3, 78, 161, 0.2);
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 290px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+.msme-reg-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.msme-reg-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-muted);
+}
+.msme-status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #ecfdf5;
+    color: #059669;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 0.68rem;
+    font-weight: 700;
+}
+.msme-reg-number-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: #ffffff;
+    border: 1px dashed rgba(3, 78, 161, 0.35);
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+.msme-reg-number {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #034ea1;
+    letter-spacing: 0.6px;
+    user-select: all;
+}
+.msme-copy-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-secondary);
+    padding: 4px 6px;
+    border-radius: 4px;
+    transition: var(--transition-smooth);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+.msme-copy-btn:hover {
+    color: #034ea1;
+    background: rgba(3, 78, 161, 0.1);
+}
+.msme-verify-action {
+    display: flex;
+    justify-content: flex-end;
+}
+.msme-verify-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #034ea1;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+.msme-verify-link:hover {
+    color: var(--secondary-orange);
+    transform: translateX(2px);
+}
+
+@media (max-width: 992px) {
+    .msme-content-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        text-align: center;
+    }
+    .msme-logo-col {
+        align-items: center;
+    }
+    .msme-details-col {
+        align-items: center;
+    }
+    .msme-title-row {
+        justify-content: center;
+    }
+    .msme-tags {
+        justify-content: center;
+    }
+    .msme-reg-col {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .msme-reg-box {
+        width: 100%;
+        max-width: 420px;
+    }
+    .msme-verify-action {
+        justify-content: center;
+    }
+}
+
 /* Footer Styling */
 .footer {
     background: #f8fafc;

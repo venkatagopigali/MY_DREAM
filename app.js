@@ -565,4 +565,28 @@ document.addEventListener('DOMContentLoaded', () => {
         startHeroAutoSlide();
     }
 
+    // MSME Udyam Registration ID Copy Action
+    const copyUdyamBtn = document.getElementById('copy-udyam-btn');
+    if (copyUdyamBtn) {
+        copyUdyamBtn.addEventListener('click', function () {
+            const regElement = document.getElementById('udyam-reg-id');
+            if (!regElement) return;
+            const regText = regElement.innerText.trim();
+            
+            navigator.clipboard.writeText(regText).then(() => {
+                const icon = copyUdyamBtn.querySelector('i');
+                if (icon) {
+                    icon.className = 'fa-solid fa-check text-green';
+                    copyUdyamBtn.title = 'Copied!';
+                    setTimeout(() => {
+                        icon.className = 'fa-regular fa-copy';
+                        copyUdyamBtn.title = 'Copy Registration ID';
+                    }, 2000);
+                }
+            }).catch(err => {
+                console.error('Clipboard copy failed:', err);
+            });
+        });
+    }
+
 });
